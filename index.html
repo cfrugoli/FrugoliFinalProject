@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <title>Connor's MIDI Effects</title>
+  <script src="script.js" type="module"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <h1>Connor's MIDI Effects</h1>
+    <div align="center">
+      <button id="transposeOnOff">Transposition On/Off</button>
+      <label for="transposeSlider">Transposition Amount</label>
+      <input type="range" min="-12" max="12" id="transposeSlider" />
+    </div>
+    <div align="center">
+      <button id="chordOnOff">Chord Creation On/Off</button>
+      <select id="chordSelection">
+        <option 1>Major</option>
+        <option 2>Minor</option>
+        <option 3>Augmented</option>
+        <option 4>Diminished</option>
+        <option 5>Major Seventh</option>
+        <option 6>Minor Seventh</option>
+        <option 7>Major Seven Flat Five</option>
+      </select>
+    </div>
+    <div align="center">
+      <button id="delayOnOff">Delay On/Off</button>
+    </div>
+    <div>
+      <button id="arpeggiatorOnOff">Arpeggiatior On/Off</button>
+    </div>
+  </body>
+</html>
