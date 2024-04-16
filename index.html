@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html>
   <title>Connor's MIDI Effects</title>
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
   <script src="script.js" type="module"></script>
   <link rel="stylesheet" href="./style.css" />
   <body>
     <h1>Connor's MIDI Effects</h1>
     <div align="center">
-      <button id="transposeOnOff">Transposition On/Off</button>
-      <label for="transposeSlider">Transposition Amount</label>
-      <input type="range" min="-12" max="12" id="transposeSlider" />
-    </div>
-    <div align="center">
-      <button id="chordOnOff">Chord Creation On/Off</button>
-      <select id="chordSelection">
-        <option 1>Major</option>
-        <option 2>Minor</option>
-        <option 3>Augmented</option>
-        <option 4>Diminished</option>
-        <option 5>Major Seventh</option>
-        <option 6>Minor Seventh</option>
-        <option 7>Major Seven Flat Five</option>
-      </select>
-    </div>
-    <div align="center">
-      <button id="delayOnOff">Delay On/Off</button>
-    </div>
-    <div>
-      <button id="arpeggiatorOnOff">Arpeggiatior On/Off</button>
+      <div>
+        <h3>Select Your MIDI Input</h3>
+        <select id="selectIn"></select>
+      </div>
+      <div>
+        <h3>Select Your MIDI Output</h3>
+        <select id="selectOut"></select>
+      </div>
+      <div>
+        <input type="checkbox" class="button" id="transposeOnOff" />
+        <label id="transposeLabel" for="transposeOnOff"
+          >Transposition Off</label
+        >
+        <input type="range" min="-12" max="12" value="0" id="transposeSlider" />
+        <label id="transposeSliderLabel" for="transposeSlider"
+          >Transposition Amount: 0 Semitones</label
+        >
+      </div>
+      <div>
+        <input type="checkbox" class="button" id="chordOnOff" />
+        <label id="chordLabel" for="chordOnOff">Chord Creation Off</label>
+        <select id="chordSelection">
+          <option 1>Major</option>
+          <option 2>Minor</option>
+          <option 3>Augmented</option>
+          <option 4>Diminished</option>
+          <option 5>Major Seventh</option>
+          <option 6>Minor Seventh</option>
+          <option 7>Major Seven Flat Five</option>
+        </select>
+      </div>
+      <div>
+        <input type="checkbox" class="button" id="delayOnOff" />
+        <label id="delayLabel" for="delayOnOff">Delay Off</label>
+        <input type="range" min="0" max="2000" value="0" id="delaySlider" />
+        <label id="delaySliderLabel" for="delaySlider" \
+          >Delayed by 0 Milliseconds</label
+        >
+      </div>
+      <div>
+        <input type="checkbox" class="button" id="arpOnOff" />
+        <label id="arpLabel" for="arpOnOff">Arpeggiator Off</label>
+        <input type="range" min="0" max="100" value="0" id="arpSlider" />
+        <label id="arpSliderLabel" for="arpSlider"
+          >0 Milliseconds Between Notes</label
+        >
+      </div>
     </div>
   </body>
 </html>

@@ -19,7 +19,7 @@ let third = [0, 3, 4];
 let fourth = [0, 5, 6];
 let fifth = [0, 6, 7, 8];
 let sixth = [0, 8, 9];
-let seventh = [0, 10, 11];
+let seventh = [0, 9, 10, 11];
 
 // Chord function
 const dynamicQuality = function (chordQuality) {
@@ -54,12 +54,12 @@ const chordCreation = function (midiInput) {
   let root = midiInput.note.number;
   let chord = [
     root,
-    root + chordSecond,
-    root + chordThird,
-    root + chordFourth,
-    root + chordFifth,
-    root + chordSixth,
-    root + chordSeventh,
+    chordSecond,
+    chordThird,
+    chordFourth,
+    chordFifth,
+    chordSixth,
+    chordSeventh,
   ];
   return chord;
 };

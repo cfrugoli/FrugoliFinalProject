@@ -7,3 +7,75 @@ h1 {
   font-family: "Times New Roman", Times, serif;
   color: lightblue;
 }
+
+h3 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(255, 255, 255);
+}
+
+div {
+  padding: 5px;
+}
+
+#selectIn {
+  background-color: slategray;
+  color: lightblue;
+  border-color: black;
+  border-radius: 5px;
+}
+
+#selectOut {
+  background-color: slategray;
+  color: lightblue;
+  border-color: black;
+  border-radius: 5px;
+}
+
+#transposeOnOff {
+  appearance: none;
+  background-color: #ff0000;
+  border: 2px solid #dcdcdc;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+#chordOnOff {
+  appearance: none;
+  background-color: #ff0000;
+  border: 2px solid #dcdcdc;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+#chordSelection {
+  background-color: slategray;
+  color: lightblue;
+  border-color: black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#delayOnOff {
+  appearance: none;
+  background-color: #ff0000;
+  border: 2px solid #dcdcdc;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+#arpOnOff {
+  appearance: none;
+  background-color: #ff0000;
+  border: 2px solid #dcdcdc;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
