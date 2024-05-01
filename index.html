@@ -11,9 +11,17 @@
         <h3>Select Your MIDI Input</h3>
         <select id="selectIn"></select>
       </div>
-      <div>
+      <!-- <div>
         <h3>Select Your MIDI Output</h3>
         <select id="selectOut"></select>
+      </div> -->
+      <div>
+        <h3>Select Your Gain</h3>
+        <input type="range" min="0" max="100" value="50" id="gainSlider" />
+        <label id="gainSliderLabel" for="gainSlider">Gain at 50%</label>
+      </div>
+      <div>
+        <h2>Control Your MIDI Effects</h2>
       </div>
       <div>
         <input type="checkbox" class="button" id="transposeOnOff" />
@@ -44,14 +52,6 @@
         <input type="range" min="0" max="2000" value="0" id="delaySlider" />
         <label id="delaySliderLabel" for="delaySlider" \
           >Delayed by 0 Milliseconds</label
-        >
-      </div>
-      <div>
-        <input type="checkbox" class="button" id="arpOnOff" />
-        <label id="arpLabel" for="arpOnOff">Arpeggiator Off</label>
-        <input type="range" min="0" max="100" value="0" id="arpSlider" />
-        <label id="arpSliderLabel" for="arpSlider"
-          >0 Milliseconds Between Notes</label
         >
       </div>
     </div>
