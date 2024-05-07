@@ -1,3 +1,5 @@
+await WebMidi.enable();
+
 const MidiEffects = {
   // Chord tonality bank
   second: [0, 2],
@@ -8,27 +10,27 @@ const MidiEffects = {
   seventh: [0, 9, 10, 11],
 
   // Chord note initiliazation
-  chordSecond: function () {
+  chordSecond() {
     return this.second[0];
   },
-  chordThird: function () {
+  chordThird() {
     return this.third[0];
   },
-  chordFourth: function () {
+  chordFourth() {
     return this.fourth[0];
   },
-  chordFifth: function () {
+  chordFifth() {
     return this.fifth[0];
   },
-  chordSixth: function () {
+  chordSixth() {
     return this.sixth[0];
   },
-  chordSeventh: function () {
+  chordSeventh() {
     return this.seventh[0];
   },
 
   // Chord function
-  dynamicQuality: function (chordQuality) {
+  dynamicQuality(chordQuality) {
     if ((chordQuality = "Major")) {
       this.chordThird = this.third[2];
       this.chordFifth = this.fifth[2];
@@ -55,9 +57,9 @@ const MidiEffects = {
       this.chordSeventh = this.seventh[2];
     }
   },
-  chordCreation: function (midiInput) {
+  chordCreation(midiInput) {
     let root = midiInput.note.number;
-    let chord = [
+    return [
       root,
       root + this.chordSecond,
       root + this.chordThird,
@@ -66,15 +68,15 @@ const MidiEffects = {
       root + this.chordSixth,
       root + this.chordSeventh,
     ];
-    return chord;
+
   },
 
   // Transposition function
-  transpose: function (midiInput, transposition) {
+  transpose(midiInput, transposition) {
     let pitch = (midiInput.note += transposition);
     let transposedNote = new Note(pitch).number;
-    let transposedChord = this.chordCreation(transposedNote);
-    return transposedChord;
+    return this.chordCreation(transposedNote);
+
   },
 };
 
